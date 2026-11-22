@@ -137,7 +137,6 @@ const login = async (req, res) => {
 
         // 6. Store only the refresh token hash
         user.refreshTokenHash = hashRefreshToken(refreshToken);
-        console.log(accessToken);
         await user.save();
 
         // 7. Send response
